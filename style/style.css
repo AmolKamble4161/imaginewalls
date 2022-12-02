@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Martel:wght@200&family=Poppins:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    margin: 0px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo{
+    display: flex;
+    align-items: center;
+}
+header .logo img{
+    height: 50px;
+    width: 65px;
+    margin-right: 10px;
+}
+header .logo p{
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 36px;
+    margin-top: 10px;
+}
+header nav a{
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    
+}
+header nav a::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0px;
+    background-color: #54BAB9;
+    top: 25px;
+    transition: .2s ease;
+    border-radius: 15px;
+}
+header nav a:hover::before{
+    height: 2px;
+    transition: .2s ease;
+}
+header nav a:not(:last-child){
+    margin-right: 15px;
+}
+
+/* main page */
+.main-page{
+    position: relative;
+    height: 90vh;
+    display: flex;
+}
+.main-page .data{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 180px;
+    color: #fff;
+    z-index: 1;
+}
+.main-page .data p{
+    font-size: 24px;
+}
+.main-page .data h1{
+    font-size: 64px;
+    font-family: 'Martel', serif;
+    line-height: 100px;
+}
+.main-page .data input{
+    background-color: #302F2F;
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: none;
+    transition: .5s ease;
+}
+.main-page .data input:hover{
+    background-color: #fff;
+    color: #000;
+    transition: .5s ease;
+    box-shadow: 0px 0px 40px #fff;
+}
+.main-page .data::before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: -55px;
+    transform: translateY(-50%);    
+    height: 440px;
+    width: 480px;
+    border: 10px solid #ffffff87;
+    animation: moving;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    z-index: -1;
+}
+@keyframes moving{
+    0%{
+        top: 50%;
+        left: -55px;
+    }
+    25%{
+        top: 55%;
+        left: -55px;
+        
+    }
+    50%{
+        top: 55%;
+        left: -25px;
+    }
+    75%{
+        top: 50%;
+        left: -25px;
+    }
+    100%{
+        top: 50%;
+        left: -55px;
+    }
+}
+.main-page .leftPart{
+    background-color: #54BAB9;
+    width: 30%;
+    height: 100%;
+
+}
+.main-page .rightPart{
+    background-image: url(../Images/main-page-image.jpg);
+    width: 70%;
+    height: 100%;
+    background-size: cover;
+}
+
+/* welcome to imagine walls */
+.work{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0px 100px;
+}
+.work .images{
+    display: flex;
+}
+.work .images .img1 img{
+    height: 500px;
+    width: 300px;
+}
+.work .images .img2 img{
+    position: relative;
+    height: 400px;
+    width: 250px;
+    top: 46px;
+    left: -170px;
+}
+.work .info .top{
+    font-size: 20px;
+    color: #766666;
+    margin-bottom: 16px;
+}
+.work .info .top img{
+    height: 14px;
+}
+.work .info h2{
+    font-family: 'Martel', serif;
+    font-size: 48px;
+    line-height: 70px;
+}
+.work .info .text{
+    font-size: 18px;
+    margin: 10px 0px 20px;
+    width: 90%;
+    color: #565555;
+}
+.work .info input{
+    background-color: #302F2F;
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: none;
+    transition: .5s ease;
+}
+.work .info input:hover{
+    background-color: #fff;
+    color: #000;
+    transition: .5s ease;
+    box-shadow: 0px 0px 20px #000;
+}
+
+/* What we do */
+.wedo{
+    margin: 0px 100px 100px;
+}
+.wedo .head{
+    text-align: center;
+}
+.wedo .head p{
+    font-size: 18px;
+    position: relative;
+}
+.wedo .head p img{
+    height: 14px;
+}
+.wedo .head h2{
+    font-size: 36px;
+    font-family: 'Martel', serif;
+    margin-bottom: 20px;
+}
+.wedo .grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.wedo .grid .items{
+    text-align: center;
+    background-color: #c4c4c43d;
+    padding: 30px 50px;
+}
+.wedo .grid .items img{
+    height: 100px;
+    width: 100px;
+}
+.wedo .grid .items .plan{
+    font-weight: bold;
+    font-family: 'Martel', serif;
+    font-size: 20px;
+}
+.wedo .grid .items .sec{
+    font-size: 14px;
+    margin-bottom: 7px;
+    margin-top: 7px;
+    
+}
+.wedo .grid .items input{
+    border: none;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+}
+
+/* play video */
+.videoPlay{
+    height: 500px;
+    width: 100%;
+    background-image: url("../Images/video\ watch.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+.videoPlay .play{
+    position: absolute;
+    background-color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100px;
+    padding: 30px;
+    width: 410px;
+}
+.videoPlay .play h2{
+    font-family: 'Martel', serif;
+    font-size: 20px;
+    color: #302F2F;
+}
+.videoPlay .play .btn{
+    display: flex;
+    align-items: center;
+}
+.videoPlay .play .btn i{
+    margin-right: 10px;
+    font-size: 40px;
+    color: #766666;
+    transition: .5s ease;
+}
+.videoPlay .play .btn i:hover{
+    transform: scale(1.1);
+    transition: .5s ease;
+}
+.videoPlay .play p{
+    margin: 10px 0px;
+}
+
+/* Our clients */
+.clients{
+    margin: 50px 100px;
+}
+.clients .head{
+    text-align: center;
+}
+.clients .head p{
+    font-size: 18px;
+}
+.clients .head p img{
+    height: 14px;
+}
+.clients .head h2{
+    font-size: 36px;
+    font-family: 'Martel', serif;
+    margin-bottom: 20px;
+}
+.clients .client{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* out best team */
+.team{
+    padding: 30px 100px;
+    background-color: #E9E9E9;
+    height: 90vh;
+}
+.team .text{
+    text-align: center;
+}
+.team .text p{
+    font-size: 18px;
+}
+.team .text p img{
+    height: 14px;
+}
+.team .text h2{
+    font-size: 36px;
+    font-family: 'Martel', serif;
+    margin-bottom: 20px;
+}
+.team .cards{
+    display: flex;
+    justify-content: space-around;
+}
+.team .cards .card{
+    position: relative;
+    background-color: #766666;
+    height: 400px;
+    width: 300px;
+    color: #fff;
+    transition: .5s ease;
+}
+.team .cards .card:hover{
+    background-color: #302F2F;
+    transition: .5s ease;
+}
+.team .cards .card .img{
+    height: 400px;
+    width: 300px;
+    overflow: hidden;
+    
+}
+.team .cards .card .img .icon{
+    display: inline-grid;
+    position: relative;
+    top: 400px;
+    transition: .5s ease;
+}
+.team .cards .card:hover .img .icon{
+    top: 280px;
+    transition: .5s ease;
+}
+.team .cards .card .img .icon i{
+    z-index: 3;
+    font-size: 20px;
+    margin: 3px 0px;
+    color: #fff;
+}
+.team .cards .card .img .icon i:hover{
+    color: #54BAB9;
+}
+
+.team .cards .card img{
+    width: 300px;
+    height: 400px;
+    position: absolute; 
+    left: -50px;
+    top: 50px;
+    transition: .5s ease;
+}
+.team .cards .card:hover img{
+    box-shadow: 0px 0px 7px #000;
+    transition: .5s ease;
+}
+.team .cards .card p{
+    position: relative;
+    transform: rotate(90deg);
+    right: -126px;
+    top: 160px;
+}
+
+/* our work gallary */
+.gallary{
+    padding: 50px 100px;
+}
+.gallary .title{
+    text-align: center;
+}
+.gallary .title p{
+    font-size: 18px;
+}
+.gallary .title p img{
+    height: 14px;
+}
+.gallary .title h2 {
+    font-size: 36px;
+    font-family: 'Martel', serif;
+    margin-bottom: 20px;
+}
+.gallary .works{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+.gallary .works .work-1 h3{
+    font-size: 20px;
+    font-family: 'Martel', serif;
+    font-weight: bold;
+}
+.gallary .works .work-1 p{
+    font-size: 15px;
+}
+.gallary .works .work-1 .img{
+    height: 320px;
+    width: 100%;
+    overflow: hidden;
+}
+.gallary .works .work-1 img{
+    height: 320px;
+    width: 100%;
+    transition: .5s ease;
+}
+.gallary .works .work-1 img:hover{
+    transform: scale(1.1);
+    transition: .5s ease;
+}
+
+/* footer */
+footer{
+    padding: 30px 100px;
+    background-color: #E9E9E9;
+    display: flex;
+    justify-content: space-around;
+}
+footer .add{
+    width: 30%;
+}
+footer .brand .logo{
+    display: flex;
+    align-items: center;
+}
+footer .brand .logo img{
+    height: 50px;
+    width: 65px;
+    margin-right: 10px;
+}
+footer .brand .logo h1{
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 36px;
+    margin-top: 10px;
+}
+footer .links i{
+    font-size: 20px;
+    margin: 0px 3px;
+}
+footer .links i:hover{
+    color: #54BAB9;
+}
+footer .add, footer .cont{
+    margin-top: 20px;
+}
